@@ -1,0 +1,26 @@
+{
+    "persona":[{
+        "id":"1",
+        "nombre":"Ramon",
+        "apellido":"Cruz",
+        "dni":"33.182.790"
+    },
+    {
+        "id":"2",
+        "nombre":"Nico",
+        "apellido":"Cruz",
+        "dni":"33.182.790"
+    },
+    {
+        "id":"3",
+        "nombre":"Franco",
+        "apellido":"Cruz",
+        "dni":"33.182.790"
+    },
+    {
+        "id":"4",
+        "nombre":"Carina",
+        "apellido":"Cruz",
+        "dni":"33.182.790"
+    }]
+}
