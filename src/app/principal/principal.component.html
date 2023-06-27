@@ -1,5 +1,30 @@
-<div >
-    <h1 class="text-center ">CRUD de prueba 1</h1>
+<div class="container" >
+    <h1 class="text-center ">CRUD de prueba</h1>
+     <p><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregar">Agregar</button>  Agregar un nuevo Registro</p>
+     
+<!-- Modal -->
+<div class="modal fade" id="agregar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formAgregar">
+          Nombre : <input type="text" formControlName="nombre"> <br>
+          Apellido: <input type="text" formControlName="apellido"> <br>
+          DNI: <input type="text" formControlName="dni"> <br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="agregar()">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
 </div>
 
 <div class="container">
@@ -12,6 +37,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
                     <th scope="col">DNI</th>
+                    <th  scope="col">ACCION</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -20,6 +46,27 @@
                     <td>{{perso.nombre}}</td>
                     <td>{{perso.apellido}}</td>
                     <td>{{perso.dni}}</td>
+                    <td><button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Editar</button>    
+                        <button type="button" class="btn btn-danger ms-2" (click)="borrarPersona(perso.id)">Eliminar</button></td>
+                    
+<!-- Modal EDITAR -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
                   </tr>
                   
                 </tbody>

@@ -10,7 +10,15 @@ export class PersonaService {
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('./assets/data/data.json')
+    return this.http.get('https://prueba.portfoliorcruz.com/ver/personas')
     
+  }
+
+  nuevaPersona(url: string, body: any): Observable<any> {
+    return this.http.post(url, body);
+  }
+
+  borrarPersona(url: string, body: any): Observable<any> {
+    return this.http.delete(url, body);
   }
 }
